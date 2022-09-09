@@ -1,0 +1,145 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="13.js"></script>
+</head>
+<body>
+<section class="task1">
+    <p>1st Number:
+        <input type="number" id="number1"></p>
+    <p>2st Number:
+        <input type="number" id="number2"></p>
+    <p>
+        <input type="button" value="Үржих" onclick="multiply()"> 
+        <input type="button" value="Хуваах" onclick="division()">
+    </p>
+    
+     <p id="result">Үр дүн: </p>
+    <script>
+        function multiply(){
+            var num1 = document.getElementById("number1").value;
+            var num2 = document.getElementById("number2").value;
+            var res1 = parseInt(num1) * parseInt(num2);
+            document.getElementById("result").innerHTML += res1;
+        }
+        function division(){
+            //  utga awah
+            var num1 = document.getElementById("number1").value;
+            var num2 = document.getElementById("number2").value;
+            var res2 = parseInt(num1) / parseInt(num2);
+            document.getElementById("result").innerHTML += res2;
+        }
+    </script>
+</section>
+
+<section class="task2">
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Town</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Eve</td>
+            <td>Sofia</td>
+        </tr>
+        <tr>
+            <td>Nick</td>
+            <td>Varna</td>
+        </tr>
+        <tr>
+            <td>Didi</td>
+            <td>Ruse</td>
+        </tr>
+        <tr>
+            <td>Tedy</td>
+            <td>Varna</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    <input type="button" value="Colorize" onclick="change()">
+</p>
+    
+        <script>
+            function change(){
+                var trs = document.getElementsByTagName("tr");
+                for( var i = 0; i < trs.length; i++){
+                    if(i % 2 != 0) {
+                        trs[i].setAttribute("style", "background-color: orange");
+                        // trs[i].style.backgroundColor = "orange";
+                    }
+                }
+            }
+        </script>
+    </section>
+
+    <section class="task3">
+        <p>
+            Name: <input type="text" id="names">
+        </p>
+        <p>
+            Price: <input type="text" id="cost">
+        </p>
+        <p>
+            <input type="button" value="Insert" onclick="insert()">
+        </p>
+        
+        <table border="1">
+            <thead>
+                <th>Item</th>
+                <th>Price</th>
+            </thead>
+            <tbody id="main">
+                 
+            </tbody>
+            <tfoot>
+                <th>total</th>
+                <th id="total">0</th>
+            </tfoot>
+        </table>
+         
+        <script>
+           function insert(){
+            var num1 = document.getElementById("names").value;
+            var td1 = document.createElement("td");
+            td1.innerHTML = num1;
+
+            var num2 = document.getElementById("rating").value;
+            var td2 = document.createElement("td");
+            td2.innerHTML = num2;
+            
+            var td3 = document.createElement("button", "value: Delete");
+            
+            var tr = document.createElement("tr");
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+
+            document.getElementById("main").appendChild(tr);
+            // total nemegdvvleh
+            var tot = document.getElementById("total").innerHTML;
+            var sum = parseInt(tot) + parseInt(num2);
+            document.getElementById("total").innerHTML = sum; 
+           }
+        </script>
+
+    </section>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, ducimus.</p>
+    <button onclick="my()">try</button>
+    <script>
+        function my(){
+            var btn = document.createElement("button");
+            btn.innerHTML = 
+        }
+    </script>
+</body>
+</html>

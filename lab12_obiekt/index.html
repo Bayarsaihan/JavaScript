@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 12</title>
+    <link rel="stylesheet" href="app12.js">
+</head>
+<body>
+    <h1>12</h1>
+    <script>
+        // task 1
+        var a = new Array();
+        var b = new Array();
+        a = prompt("firstString? ");
+        b = prompt("secondString? ");
+        if(a.length > b.length)
+            alert("frist");
+        else
+            alert("second");
+            // task 2
+        var pNumber;
+        pNumber = prompt("phoneNumber? ");
+        document.writeln("(976) "+pNumber.charAt(0)+pNumber[1]+pNumber[2]+pNumber[3]+"-"+pNumber[4]+pNumber[5]+pNumber[6]+pNumber[7]);
+        // task 3
+        var x = prompt("hurwvvleh String? ");
+        var arr = x.split(" ");
+        for(var i = arr.length-1; i >= 0; i--)
+            document.writeln(arr[i]);
+    task 4
+    
+        var y = prompt("tom & jijig? ");
+        y = y.toUpperCase();
+        x = y.toLowerCase();
+
+        document.writeln(y);
+        document.writeln(x);
+
+    task 5
+
+    var txt1 = prompt("text1? ");
+    var txt2 = prompt("word? ");
+    var index = 0;
+    var x = txt1.indexOf(txt2, index);
+    var count = 0;
+    while(x != -1){
+        index++;
+        x = txt1.indexOf(txt2, index);
+        
+        count++;
+    }
+    document.writeln(count);
+
+    </script>
+</body>
+</html>

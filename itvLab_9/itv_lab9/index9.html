@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab9</title>
+    <script src="app.js"></script>
+</head>
+<body>
+    <p>
+        <h3>
+            1. Дараах кодоос алдаа ол. Нэгээс олон алдаа байж болзошгүй.<br>
+        a. for (x= 100, x >= 1, ++x ) <br>
+            document.writeln( x ); <br>
+        алдаа нь зарлах кодын толгой хэсэг ; буюу semicolon тавина. Мөн --x байх ёстой. <br><br>
+        b) Дараах код value хувьсагчийн тэгш сондгой эсэхийг хэвлэнэ. <br>
+        switch ( value % 2 ) { <br>
+            case 0: <br>
+            document.writeln( "Even integer" ); <br>
+            case 1: <br>
+            document.writeln( "Odd integer" ); <br>
+            Алдаа нь default утга байхгүй , зарлах value<br><br>
+    c) Дараах код 19-оос 1 хүртэлх сондгой тоонуудыг хэвлэнэ:
+    <br>
+        for (x= 19; x >= 1; x += 2 ) <br>
+        document.writeln( x ); <br>
+        Алдаа нь x -= 2; гэж болно, x- ээ зарлаж өгнө, x - ээ 1 ээс эхлүүлээд өсөх дарааллаар хэвлэж болно. <br><br>
+
+        d) Дараах код 2-оос 100 хүртэлх тэгш тоонуудыг хэвлэнэ:<br>
+             var counter = 2;<br>
+            do {<br>
+            document.writeln( counter );<br>
+            counter += 2;<br>
+            } while ( counter < 100 );<br>
+            Алдаа нь 100 хүртэлх гэхээр counter <= 100 гэж бич
+<p>
+    2. Дараах скрипт юу хийж байгааг тайлбарлан бич. <br>
+        7 мөртэй 5 баганатай хүснэгт үүсгээд матриц байдлаар хэвлэж байна.
+</p>
+<p>
+    7. i=1, j=2, k=3, m=2 бол дараах зааврууд ямар утга хэвлэх вэ? <br>
+a) document.writeln( i == 1 );      (1)<br>
+b) document.writeln( j == 3 );      (0)<br>
+c) document.writeln( i >= 1 && j < 4 );     (1)<br>
+d) document.writeln( m <= 99 && k < m );     (0)<br>
+e) document.writeln( j >= i || k == m );        (1)<br>
+f) document.writeln( k + m < j || 3 - j >= k ); (0)<br>
+g) document.writeln( !( k > m ) ); (0)<br>
+
+</p>
+<p>
+    8. k-ийн утга 1, 2, 3, 4, 10 байх үед x <br>
+// x-ийн утга 1, 3, 4, 3, 30;
+</p>
+
+    </h3>
+    </p>
+</body>
+</html>

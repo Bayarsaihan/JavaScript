@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>#Task 1: My plan </h1>
+    <p>
+        <input type="text" id="input">
+        <input type="button" value="Add Task" onclick="insert()">
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>Cook</th>
+            </tr>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>Clean</th>
+            </tr>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th><del>Study</del></th>
+            </tr>
+            
+        </thead>
+        <tbody id="main">
+             
+        </tbody>
+    </table>
+     <input type="button" onclick="Complete()" value="Complete Tasks ">
+     <input type="button" onclick="Delete()" 
+       value="Delete Tasks">
+    <script>
+       function insert(){
+        var td1 = document.createElement("input");
+        td1.setAttribute("type", "checkbox");
+        td1.createClassName("input");
+
+        var num2 = document.getElementById("input").value;
+        var td2 = document.createElement("th");
+        td2.innerHTML = num2;
+
+        var tr = document.createElement("tr");
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+
+        document.getElementById("main").appendChild(tr);
+       }
+       function Delete(){
+        var trs = document.getElementsByTagName("input");
+                for( var i = 0; i < trs.length; i++)
+                    if(document.getElementsByClassName("input").checked == true) input[i].remove();
+       }
+
+    //    function myFunction() {
+    //             var trs = document.getElementsByTagName("tr");
+    //             for( var i = 0; i < trs.length; i++)
+    //                 tr.remove();
+    //         }
+
+
+        
+       function Complete(){
+            var dell = document.createElement("li");
+            dell.appendChild(tr);
+       }
+ 
+    </script>
+    
+    <!-- Task 2 -->
+
+    <h1>#Task 2: My shopping list </h1>
+<p> Enter a new item: <input type="text" id="item">
+    <input type="button" onclick="addItem()" value="Add item"></p>
+<li id="main">
+    Eggs    <input type="button" value="Delete">
+</li>
+<li>
+    Milk    <input type="button" value="Delete">
+</li>
+<li>
+    Bread   <input type="button" value="Delete">
+</li>
+<script>
+    function addItem(){
+        var utga = document.getElementById("item").value;
+        var listItem = document.createElement("li");
+        listItem.innerHTML = utga;
+        btn = document.createElement("button");
+        btn.innerHTML = 'Delete';
+        btn.addEventListener("click", del);
+        function del(){
+            listItem.remove();
+        }
+        listItem.appendChild(btn);
+        document.body.appendChild(listItem);
+    }
+</script>
+</body> 
+</html>

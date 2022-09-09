@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>My favorite movies</h1>
+        Title: <input type="text" id="names" placeholder="Input a new Movie Name"> 
+        Rating: <input type="text" id="rating" placeholder="rating 1-10 point">
+        <button onclick="AddMovie()">Add Movie</button>
+
+        <table border="1" width="80% ">
+            <thead>
+                <tr >
+                    <th>Title</th>
+                    <th>Rate</th>
+                    <th><button onclick="Delete()">Delete</button></th>
+                </tr>
+            </thead>
+            <tbody id="main">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function AddMovie(){
+         var num1 = document.getElementById("names").value;
+         var td1 = document.createElement("td");
+         td1.innerHTML = num1;
+
+         var num2 = document.getElementById("rating").value;
+         var td2 = document.createElement("td");
+         td2.innerHTML = num2;
+
+         var td3 = document.createElement("button");
+         td3.innerHTML = "Delete";
+         td3.addEventListener("click", myFunction);
+        //  addEvent function
+            function myFunction() {
+                var trs = document.getElementsByTagName("tr");
+                for( var i = 0; i < trs.length; i++)
+                    tr.remove();
+            }
+
+         var tr = document.createElement("tr");
+         tr.appendChild(td1);
+         tr.appendChild(td2);
+         tr.appendChild(td3);
+         document.getElementById("main").appendChild(tr);
+        } 
+     </script>
+</body>
+</html>
